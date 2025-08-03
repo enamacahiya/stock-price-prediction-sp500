@@ -1,0 +1,161 @@
+{
+  "grid_search_summary": {
+    "best_score_neg_mse": -181.279485,
+    "best_rmse": 13.464007,
+    "total_parameter_combinations": 32,
+    "cross_validation_folds": 5,
+    "total_fits": 160
+  },
+  "best_parameters": {
+    "colsample_bytree": 1.0,
+    "learning_rate": 0.05,
+    "max_depth": 5,
+    "n_estimators": 100,
+    "subsample": 1.0
+  },
+  "final_model_metrics": {
+    "training": {
+      "rmse": 12.983718,
+      "mae": 1.770238,
+      "r2": 0.982260
+    },
+    "validation": {
+      "rmse": 13.034426,
+      "mae": 1.745872,
+      "r2": 0.981778
+    },
+    "test": {
+      "rmse": 14.424442,
+      "mae": 1.832065,
+      "r2": 0.978305
+    }
+  },
+  "feature_importance_top10": [
+    {
+      "feature": "open",
+      "importance": 0.739614
+    },
+    {
+      "feature": "Name_PCLN",
+      "importance": 0.241274
+    },
+    {
+      "feature": "volume",
+      "importance": 0.006342
+    },
+    {
+      "feature": "Name_GOOG",
+      "importance": 0.001629
+    },
+    {
+      "feature": "Name_AMZN",
+      "importance": 0.001325
+    },
+    {
+      "feature": "Name_AZO",
+      "importance": 0.001101
+    },
+    {
+      "feature": "Name_EQIX",
+      "importance": 0.000967
+    },
+    {
+      "feature": "Name_SHW",
+      "importance": 0.000947
+    },
+    {
+      "feature": "Name_BLK",
+      "importance": 0.000926
+    },
+    {
+      "feature": "Name_MTD",
+      "importance": 0.000869
+    }
+  ],
+  "top_5_parameter_combinations": [
+    {
+      "rank": 1,
+      "score": -181.279485,
+      "std_dev": 9.863156,
+      "parameters": {
+        "colsample_bytree": 1.0,
+        "learning_rate": 0.05,
+        "max_depth": 5,
+        "n_estimators": 100,
+        "subsample": 1.0
+      }
+    },
+    {
+      "rank": 2,
+      "score": -181.420199,
+      "std_dev": 7.688684,
+      "parameters": {
+        "colsample_bytree": 0.8,
+        "learning_rate": 0.05,
+        "max_depth": 5,
+        "n_estimators": 100,
+        "subsample": 0.8
+      }
+    },
+    {
+      "rank": 3,
+      "score": -181.687971,
+      "std_dev": 9.807846,
+      "parameters": {
+        "colsample_bytree": 1.0,
+        "learning_rate": 0.05,
+        "max_depth": 5,
+        "n_estimators": 100,
+        "subsample": 0.8
+      }
+    },
+    {
+      "rank": 4,
+      "score": -181.762050,
+      "std_dev": 7.612855,
+      "parameters": {
+        "colsample_bytree": 0.8,
+        "learning_rate": 0.05,
+        "max_depth": 5,
+        "n_estimators": 100,
+        "subsample": 1.0
+      }
+    },
+    {
+      "rank": 5,
+      "score": -181.777013,
+      "std_dev": 9.443823,
+      "parameters": {
+        "colsample_bytree": 0.8,
+        "learning_rate": 0.1,
+        "max_depth": 5,
+        "n_estimators": 100,
+        "subsample": 1.0
+      }
+    }
+  ],
+  "model_analysis": {
+    "dataset_info": {
+      "total_features": 507,
+      "training_samples": "~495k",
+      "dataset": "kaggle_all_stocks_5yr"
+    },
+    "key_insights": {
+      "most_important_feature": "open price (73.96% importance)",
+      "second_most_important": "Name_PCLN (24.13% importance)",
+      "model_performance": "Strong performance with R² > 0.978 on all sets",
+      "overfitting_assessment": "Minimal overfitting (train RMSE: 12.98, test RMSE: 14.42)",
+      "optimal_parameters": "Conservative settings with low learning rate (0.05) and moderate depth (5)"
+    }
+  },
+  "training_metadata": {
+    "training_date": "2025-08-04",
+    "training_duration": "~1 hour",
+    "final_test_rmse": 14.424442,
+    "model_files_generated": [
+      "best_xgboost_model.json",
+      "xgboost_results.json"
+    ],
+    "status": "COMPLETE"
+  }
+}
